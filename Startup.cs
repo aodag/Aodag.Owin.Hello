@@ -19,7 +19,7 @@ namespace Aodag.Owin.Hello
             {
               var text = "Hello";
               var message = System.Text.Encoding.UTF8.GetBytes(text);
-              await Task.Run(()=> (env["owin.ResponseBody"] as Stream).Write(message, 0, message.Length));
+              await (env["owin.ResponseBody"] as Stream).WriteAsync(message, 0, message.Length);
             };
           });
       });
