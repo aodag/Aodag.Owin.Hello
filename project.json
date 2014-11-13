@@ -1,0 +1,16 @@
+{
+  "name": "Hello",
+  "dependencies": {
+    "Microsoft.AspNet.Http": "1.0.0-beta1",
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-beta1",
+    "Microsoft.AspNet.Owin": "1.0.0-beta1",
+    "Microsoft.AspNet.Hosting": "1.0.0-beta1"
+  },
+  "commands": {
+    "web": "Microsoft.AspNet.Hosting server=Microsoft.AspNet.Server.WebListener server.urls=http://localhost:5001"
+  },
+  "frameworks": {
+    "aspnet50": {},
+    "aspnetcore50": {}
+  }
+}
