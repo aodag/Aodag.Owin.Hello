@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 
-namespace MyApp
+namespace Aodag.Owin.Hello
 {
   public class Startup
   {
