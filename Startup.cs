@@ -1,9 +1,6 @@
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Owin;
-using System.Threading.Tasks;
-using System.IO;
-
 
 namespace Aodag.Owin.Hello
 {
@@ -15,12 +12,7 @@ namespace Aodag.Owin.Hello
         addMiddleware(
           app =>
           {
-            return async (env) =>
-            {
-              var text = "Hello";
-              var message = System.Text.Encoding.UTF8.GetBytes(text);
-              await (env["owin.ResponseBody"] as Stream).WriteAsync(message, 0, message.Length);
-            };
+            return Greeting.Invoke;
           });
       });
     }
